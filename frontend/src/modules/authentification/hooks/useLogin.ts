@@ -16,7 +16,12 @@ export const useLogin = () => {
     const [errors, setErrors] = useState<Record<string, string>>({});
     
     // Fetching auth state from Redux
-    const { isLoading, error: authError, token, registeredEmail, registeredPassword } = useSelector((state: AppState) => state.auth);
+    const { isLoading,
+        error: authError,
+        token, 
+        registeredEmail, 
+        registeredPassword 
+    } = useSelector((state: AppState) => state.auth);
 
     // Demo: Pre-fill email and password if user just registered
     useEffect(() => {
